@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="es">
+<head>
+  <title>Listado de Productos con Usuario Creador</title>
+</head>
+<body>
+<h1>Listado de Productos con Usuario Creador</h1>
+<table>
+  <tr>
+    <th>ID</th>
+    <th>Nombre</th>
+    <th>Precio</th>
+    <th>Usuario Creador</th>
+  </tr>
+  <tr th:each="producto : ${productos}">
+    <td th:text="${producto.id}"></td>
+    <td th:text="${producto.name}"></td>
+    <td th:text="${producto.price}"></td>
+    <td th:text="${producto.usuario.name}"></td>
+  </tr>
+</table>
+</body>
+</html>
